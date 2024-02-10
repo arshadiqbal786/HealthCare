@@ -58,12 +58,12 @@ public ResponseEntity<?> registerUser(@RequestBody UserDto userDto) {
             HttpStatus.OK);
 }
 
-@PreAuthorize("hasRole('ADMIN')")
+
 @GetMapping("/{userId}")
 public User getUserById(@PathVariable Long userId) {
     return userService.getUserById(userId);
 }
-@PreAuthorize("hasRole('ADMIN')")
+
 @PutMapping("/{userId}")
 public User updateUser(@PathVariable Long userId, @RequestBody UserDto userDto) {
     return userService.updateUser(userId, userDto);

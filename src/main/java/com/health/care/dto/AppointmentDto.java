@@ -1,9 +1,14 @@
 package com.health.care.dto;
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
 public class AppointmentDto {
     private LocalDateTime appointmentDateTime;
+    private String doctorName;
+    private String doctorSpecialization;
     private String location;
     private String notes;
 

@@ -22,6 +22,8 @@ public class AppointmentService {
         Appointment appointment = new Appointment();
         appointment.setUser(user);
         appointment.setAppointmentDateTime(appointmentDto.getAppointmentDateTime());
+        appointment.setDoctorName(appointmentDto.getDoctorName());
+        appointment.setDoctorSpecialization(appointmentDto.getDoctorSpecialization());
         appointment.setLocation(appointmentDto.getLocation());
         appointment.setNotes(appointmentDto.getNotes());
 

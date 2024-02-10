@@ -41,10 +41,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/api/users").permitAll()
+                .antMatchers("/api/medications/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/users/register").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/auth/signin").permitAll()
-
+                .antMatchers(HttpMethod.GET,"/api/appointments/**").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -55,6 +56,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             Exception {
         auth.userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());
+        auth.inMemoryAuthentication()
+                .withUser("arshad")
+                .password(passwordEncoder().encode("password"))
+                .roles("ADMIN");
     }
 
 //    @Override

@@ -1,8 +1,11 @@
 package com.health.care.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDate;
 
 public class HealthRecordDto {
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate recordDate;
     private Double weight;
     private Double height;

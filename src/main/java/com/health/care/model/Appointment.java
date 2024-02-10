@@ -17,6 +17,8 @@ public class Appointment {
     private User user;
 
     private LocalDateTime appointmentDateTime;
+    private String doctorName;
+    private String doctorSpecialization;
     private String location;
     private String notes;
 

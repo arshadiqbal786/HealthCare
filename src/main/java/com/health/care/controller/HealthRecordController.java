@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/healthRecords")
-@PreAuthorize("hasRole('ADMIN')")
+
 
 public class HealthRecordController {
     @Autowired

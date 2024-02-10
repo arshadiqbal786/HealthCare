@@ -12,12 +12,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/medications")
 @PreAuthorize("hasRole('ADMIN')")
-
 public class MedicationController {
     @Autowired
     private MedicationService medicationService;
 
     @PostMapping("/{userId}")
+
     public Medication addMedication(@PathVariable Long userId, @RequestBody MedicationDto medicationDto) {
         return medicationService.addMedication(userId, medicationDto);
     }

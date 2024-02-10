@@ -11,8 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/appointments")
-@PreAuthorize("hasRole('ADMIN')")
-
 public class AppointmentController {
     @Autowired
     private AppointmentService appointmentService;
@@ -23,6 +21,7 @@ public class AppointmentController {
     }
 
     @GetMapping("/{userId}")
+    @PreAuthorize("hasRole('ADMIN')")
     public List<Appointment> getAppointments(@PathVariable Long userId) {
         return appointmentService.getAppointments(userId);
     }
