@@ -17,7 +17,7 @@ public class MedicationController {
     private MedicationService medicationService;
 
     @PostMapping("/{userId}")
-
+    @PreAuthorize("hasRole('ADMIN')")
     public Medication addMedication(@PathVariable Long userId, @RequestBody MedicationDto medicationDto) {
         return medicationService.addMedication(userId, medicationDto);
     }

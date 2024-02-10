@@ -60,11 +60,13 @@ public ResponseEntity<?> registerUser(@RequestBody UserDto userDto) {
 
 
 @GetMapping("/{userId}")
+@PreAuthorize("hasRole('ADMIN')")
 public User getUserById(@PathVariable Long userId) {
     return userService.getUserById(userId);
 }
 
 @PutMapping("/{userId}")
+@PreAuthorize("hasRole('ADMIN')")
 public User updateUser(@PathVariable Long userId, @RequestBody UserDto userDto) {
     return userService.updateUser(userId, userDto);
 }
