@@ -6,9 +6,9 @@ User Registration and Authentication: Users can register for an account and auth
 
 Health Record Management: Users can add, view, and update their health records, including weight, height, and blood pressure measurements.
 
-Medication Management: Users can manage their medications by adding entries containing medication names, dosages, and frequencies.
+Medication Management: Admin can manage their medications by adding entries containing medication names, dosages, and frequencies.
 
-Appointment Scheduling: Users can schedule appointments for medical consultations or treatments and view their upcoming appointments.
+Appointment Scheduling: Users can schedule appointments for medical consultations or treatments.
 
 Role-based Access Control: The system differentiates between user roles (e.g., "USER" and "ADMIN") and restricts access to certain functionalities based on user roles.
 
