@@ -1,4 +1,4 @@
-                                                                  HealthCare Management System
+                                                      HealthCare Management System
 The HealthCare Management System is a web application designed to streamline healthcare-related tasks such as managing health records, medications, and appointments. It provides users with a convenient platform to track their health information and schedule medical appointments efficiently.
 Features
 User Registration and Authentication: Users can register for an account and authenticate themselves to access the system securely.
